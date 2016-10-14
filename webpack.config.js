@@ -1,8 +1,23 @@
 module.exports = {
   entry: "./src/app.js",
   output: {
-  	path : "./dist",
+  	path : "./dist/",
+  	publicPath : "/dist/",
     filename: "bundle.js"
   },
-  watch:true
+  module:{
+  	loaders:[
+  	 {
+  	 	test: /\.js$/,
+  	 	exclude: /node_modules/,
+  	 	loader: 'babel-loader',
+  	 	query: {
+  	 		presets: ['es2015', 'stage-0']
+  	 	}
+  	 }
+  	]
+  },
+  resolve:{
+  	extensions: ['','.js']
+  }
 }
