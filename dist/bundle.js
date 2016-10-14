@@ -52,7 +52,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	document.write('welcome to my amazing and so famous application !!!!');
+	document.write('welcome to my amazing and so famous and beautifull application !!!!');
 	(0, _logger2.default)();
 	console.log('app loaded');
 
